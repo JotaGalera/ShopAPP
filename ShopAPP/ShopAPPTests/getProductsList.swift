@@ -10,7 +10,7 @@ import XCTest
 @testable import ShopAPP
 
 class getProductsList: XCTestCase {
-
+    let mockedAPIRepository : mockedAPIRepository?
     var sut : GetProductListUseCase?
     
     override func setUp() {
