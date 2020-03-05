@@ -14,17 +14,21 @@ class getProductsList: XCTestCase {
     var sut : GetProductListUseCase?
     
     override func setUp() {
-        
+        super.setUp()
+        sut = GetProductListUseCaseImplementation()
     }
 
     override func tearDown() {
-        
+        sut = nil
+        super.tearDown()
     }
 
-    func testExample() {
+    func testExecute() {
+        let expectation = XCTestExpectation(description: "Completion triggered")
         
+        sut?.execute(completion: { product in
+            expectation.fulfill()
+        })
     }
-
-    
-
 }
+
