@@ -13,14 +13,21 @@ class ProductListTest: XCTestCase {
     var sut : ProductList?
     
     override func setUp() {
-        
+        super.setUp()
+        sut = ProductList()
     }
 
     override func tearDown() {
-       
+        sut = nil
+        super.tearDown()
     }
 
-    func testExample() {
+    func testAddProduct(){
+        let mockProduct = ProductDomain(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")
+        
+        sut?.addProductsToList(product: mockProduct)
+        
+        XCTAssertEqual(sut?.arrayProducts.first, mockProduct)
         
     }
 }
