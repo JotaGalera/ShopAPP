@@ -9,8 +9,8 @@
 import XCTest
 @testable import ShopAPP
 
-class ProductTest: XCTestCase {
-    var sut : Product?
+class ProductListTest: XCTestCase {
+    var sut : ProductList?
     
     override func setUp() {
         
