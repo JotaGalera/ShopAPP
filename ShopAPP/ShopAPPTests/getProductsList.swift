@@ -9,7 +9,7 @@
 import XCTest
 @testable import ShopAPP
 
-class getProductsList: XCTestCase {
+class GetProductsListTest: XCTestCase {
     var sut : GetProductListUseCase?
     fileprivate var mockedAPIRepository : mockedAPIRepository?
     

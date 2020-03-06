@@ -13,4 +13,19 @@ class APIRepositoryTest: XCTestCase {
 
     var sut : APIRepository?
     
+    override func setUp() {
+        super.setUp()
+        sut = APIRepositoryImplementation()
+    }
+
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
+    }
+
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+
 }

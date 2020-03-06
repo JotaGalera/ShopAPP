@@ -28,6 +28,5 @@ class ProductListTest: XCTestCase {
         sut?.addProductsToList(product: mockProduct)
         
         XCTAssertEqual(sut?.arrayProducts.first, mockProduct)
-        
     }
 }
