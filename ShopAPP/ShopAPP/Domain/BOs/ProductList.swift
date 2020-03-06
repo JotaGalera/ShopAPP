@@ -9,8 +9,12 @@
 import Foundation
 
 class ProductList {
-    var arrayProducts: [ProductDomain] = []
+     var arrayProducts: [ProductDomain]
    
+    init (arrayProducts: [ProductDomain]) {
+        self.arrayProducts = arrayProducts
+    }
+    
     func addProductsToList( product: ProductDomain ){
         arrayProducts.append(product)
     }
