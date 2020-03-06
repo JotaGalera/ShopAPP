@@ -28,10 +28,15 @@ class getProductsList: XCTestCase {
         
         sut?.execute(completion: { product in
             expectation.fulfill()
+            XCTAssertEqual(self.mockedAPIRepository?.called, true)
         })
     }
 }
 
 fileprivate class mockedAPIRepository : APIRepository{
+    var called = false
     
+    func getProductList(completion: @escaping (ProductList) -> ()) {
+        self.called = true
+    }
 }
