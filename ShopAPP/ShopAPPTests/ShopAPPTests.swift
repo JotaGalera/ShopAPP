@@ -14,7 +14,8 @@ class ProductListTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = ProductList()
+        let arrayEmpty : [ProductDomain] = []
+        sut = ProductList(arrayProducts: arrayEmpty)
     }
 
     override func tearDown() {
@@ -27,6 +28,6 @@ class ProductListTest: XCTestCase {
         
         sut?.addProductsToList(product: mockProduct)
         
-        XCTAssertEqual(sut?.arrayProducts.first, mockProduct)
+        XCTAssertEqual(sut?.getProductToList(index: 0), mockProduct)
     }
 }
