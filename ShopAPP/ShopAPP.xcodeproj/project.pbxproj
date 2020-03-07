@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */; };
 		893A2B232411692C00027759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B222411692C00027759 /* AppDelegate.swift */; };
 		893A2B252411692C00027759 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B242411692C00027759 /* SceneDelegate.swift */; };
 		893A2B272411692C00027759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B262411692C00027759 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepositoryImplementation.swift; sourceTree = "<group>"; };
 		893A2B1F2411692C00027759 /* ShopAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A2B222411692C00027759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		893A2B242411692C00027759 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8907A7A92413F638002D21A3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8907A7AA2413F641002D21A3 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8907A7AA2413F641002D21A3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		893A2B162411692C00027759 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +109,7 @@
 		893A2B212411692C00027759 /* ShopAPP */ = {
 			isa = PBXGroup;
 			children = (
+				8907A7A92413F638002D21A3 /* Data */,
 				893A2B442411712700027759 /* Domain */,
 				893A2B222411692C00027759 /* AppDelegate.swift */,
 				893A2B242411692C00027759 /* SceneDelegate.swift */,
@@ -254,6 +273,7 @@
 				893A2B272411692C00027759 /* ViewController.swift in Sources */,
 				893A2B492411758B00027759 /* ProductList.swift in Sources */,
 				89F76D092412C0900005DED6 /* APIRepository.swift in Sources */,
+				8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */,
 				893A2B472411713E00027759 /* Product.swift in Sources */,
 				893A2B232411692C00027759 /* AppDelegate.swift in Sources */,
 				893A2B252411692C00027759 /* SceneDelegate.swift in Sources */,
