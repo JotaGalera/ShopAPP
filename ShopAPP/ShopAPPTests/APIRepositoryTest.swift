@@ -31,10 +31,15 @@ class APIRepositoryTest: XCTestCase {
         sut?.getProductList(completion: { product in
             expectation.fulfill()
             XCTAssertEqual(product, productListEmpty)
+            XCTAssertEqual(mockedAPIDataSource.called, true)
         })
     }
 
 }
 class MockedAPIDataSource : APIDataSource{
+    var called = false
     
+    func getProductList( completion: @escaping (String)->() ){
+        self.called = true
+    }
 }
