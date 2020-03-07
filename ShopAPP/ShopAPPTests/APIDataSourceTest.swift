@@ -19,19 +19,17 @@ class APIDataSourceTest: XCTestCase {
     }
 
     override func tearDown() {
+        sut = nil
         super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetProductList() {
+        let expectation = XCTestExpectation(description: "Completion triggered")
+        
+        sut?.getProductList(completion: { string in
+            expectation.fulfill()
+            XCTAssertEqual(string, " ")
+        })
+        
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
