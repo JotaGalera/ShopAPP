@@ -25,9 +25,11 @@ class APIRepositoryTest: XCTestCase {
 
     func testGetProductList() {
         let expectation = XCTestExpectation(description: "Completion triggered")
+        let productListEmpty = ProductList(arrayProducts: [ProductDomain(name: "", brand: "", price: 0, currency: "", image: "")])
         
         sut?.getProductList(completion: { product in
             expectation.fulfill()
+            XCTAssertEqual(product, productListEmpty)
         })
     }
 
