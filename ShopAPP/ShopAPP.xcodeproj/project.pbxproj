@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		893A2B3A2411692F00027759 /* ShopAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B392411692F00027759 /* ShopAPPTests.swift */; };
 		893A2B472411713E00027759 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B462411713E00027759 /* Product.swift */; };
 		893A2B492411758B00027759 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B482411758B00027759 /* ProductList.swift */; };
+		894FF4CB241469A400C2860F /* ProductListMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FF4CA241469A400C2860F /* ProductListMapperTest.swift */; };
 		8955409824118AFE00821BBB /* getProductsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409724118AFE00821BBB /* getProductsList.swift */; };
 		8955409B24118B9C00821BBB /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409A24118B9C00821BBB /* GetProductListUseCase.swift */; };
 		89F76D052412BEAB0005DED6 /* APIRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */; };
@@ -57,6 +58,7 @@
 		893A2B3B2411692F00027759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		893A2B462411713E00027759 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		893A2B482411758B00027759 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		894FF4CA241469A400C2860F /* ProductListMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListMapperTest.swift; sourceTree = "<group>"; };
 		8955409724118AFE00821BBB /* getProductsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getProductsList.swift; sourceTree = "<group>"; };
 		8955409A24118B9C00821BBB /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
 		89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepositoryTest.swift; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 				EF46CF7BA1C0E9029BE7A93A /* Pods-ShopAPPTests.debug.xcconfig */,
 				2F35D19E3C99703879DA332A /* Pods-ShopAPPTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -127,6 +128,8 @@
 		8907A7AE2413FE51002D21A3 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				894FF4C92414697800C2860F /* mapper */,
+				8961BC2C241466DE005C9D1B /* DTOs */,
 				8907A7AF2413FE7B002D21A3 /* APIDataSource.swift */,
 			);
 			path = DataSource;
@@ -171,6 +174,7 @@
 		893A2B382411692F00027759 /* ShopAPPTests */ = {
 			isa = PBXGroup;
 			children = (
+				894FF4CA241469A400C2860F /* ProductListMapperTest.swift */,
 				8907A7B124140186002D21A3 /* APIDataSourceTest.swift */,
 				89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */,
 				8955409724118AFE00821BBB /* getProductsList.swift */,
@@ -199,12 +203,26 @@
 			path = BOs;
 			sourceTree = "<group>";
 		};
+		894FF4C92414697800C2860F /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mapper;
+			sourceTree = "<group>";
+		};
 		8955409924118B7D00821BBB /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				8955409A24118B9C00821BBB /* GetProductListUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		8961BC2C241466DE005C9D1B /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 		89F76D072412C0900005DED6 /* Repository */ = {
@@ -403,6 +421,7 @@
 				893A2B3A2411692F00027759 /* ShopAPPTests.swift in Sources */,
 				89F76D052412BEAB0005DED6 /* APIRepositoryTest.swift in Sources */,
 				8907A7B224140186002D21A3 /* APIDataSourceTest.swift in Sources */,
+				894FF4CB241469A400C2860F /* ProductListMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
