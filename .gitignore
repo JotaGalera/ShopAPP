@@ -1,6 +1,6 @@
-*.xcodeproj/xcuserdata
-*.xcodeproj/project.xcworkspace
-*.xcworkspace/xcuserdata
+ShopAPP.xcodeproj/xcuserdata
+ShopAPP.xcodeproj/project.xcworkspace
+ShopAPP.xcworkspace/xcuserdata
 
 *.xcuserstate
 
