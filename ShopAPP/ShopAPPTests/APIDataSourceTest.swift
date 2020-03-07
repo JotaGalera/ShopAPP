@@ -26,10 +26,8 @@ class APIDataSourceTest: XCTestCase {
     func testGetProductList() {
         let expectation = XCTestExpectation(description: "Completion triggered")
         
-        
         sut?.getProductList(completion: { string in
             expectation.fulfill()
         })
-        
     }
 }
