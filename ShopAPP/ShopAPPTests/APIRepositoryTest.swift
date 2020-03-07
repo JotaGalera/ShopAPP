@@ -39,7 +39,7 @@ class APIRepositoryTest: XCTestCase {
 class MockedAPIDataSource : APIDataSource{
     var called = false
     
-    func getProductList( completion: @escaping (String)->() ){
+    func getProductList( completion: @escaping (Data)->() ){
         self.called = true
     }
 }
