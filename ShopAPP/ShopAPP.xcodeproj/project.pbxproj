@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */; };
+		8907A7B02413FE7B002D21A3 /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907A7AF2413FE7B002D21A3 /* APIDataSource.swift */; };
 		893A2B232411692C00027759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B222411692C00027759 /* AppDelegate.swift */; };
 		893A2B252411692C00027759 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B242411692C00027759 /* SceneDelegate.swift */; };
 		893A2B272411692C00027759 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B262411692C00027759 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepositoryImplementation.swift; sourceTree = "<group>"; };
+		8907A7AF2413FE7B002D21A3 /* APIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
 		893A2B1F2411692C00027759 /* ShopAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A2B222411692C00027759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		893A2B242411692C00027759 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		8907A7A92413F638002D21A3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				8907A7AE2413FE51002D21A3 /* DataSource */,
 				8907A7AA2413F641002D21A3 /* Repository */,
 			);
 			path = Data;
@@ -86,6 +89,14 @@
 				8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		8907A7AE2413FE51002D21A3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8907A7AF2413FE7B002D21A3 /* APIDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		893A2B162411692C00027759 = {
@@ -271,6 +282,7 @@
 			files = (
 				8955409B24118B9C00821BBB /* GetProductListUseCase.swift in Sources */,
 				893A2B272411692C00027759 /* ViewController.swift in Sources */,
+				8907A7B02413FE7B002D21A3 /* APIDataSource.swift in Sources */,
 				893A2B492411758B00027759 /* ProductList.swift in Sources */,
 				89F76D092412C0900005DED6 /* APIRepository.swift in Sources */,
 				8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */,
