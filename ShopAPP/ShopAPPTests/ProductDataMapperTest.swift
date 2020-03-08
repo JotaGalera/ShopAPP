@@ -15,29 +15,37 @@ class ProductDataMapperTest: XCTestCase {
         super.tearDown()
     }
 
-    func testConvertDictionary(){
+    func testConvertDTODictionary(){
         let mockDataAsDictionary : [String:Any] = ["id": 1, "name": "shirts", "brand": "Tommy Hilfiger", "price": 80, "currency": "€", "image": "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg", "_link": "http://bestsecret-recruitment-api.herokuapp.com/products/1", "_type": "product"]
         let mockProductData : ProductData = ProductData(dict: mockDataAsDictionary)
         
-        let productDataConverted = sut?.convert(dict: mockDataAsDictionary)
+        let productDataConverted = sut?.convertToDTO(dict: mockDataAsDictionary)
         
         XCTAssertEqual(mockProductData, productDataConverted)
     }
     
-    func testConvertData() {
+    func testConvertDTOData() {
         let mockDataAsDictionary : [[String:Any]] = [["id": 1, "name": "shirts", "brand": "Tommy Hilfiger", "price": 80, "currency": "€", "image": "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg", "_link": "http://bestsecret-recruitment-api.herokuapp.com/products/1", "_type": "product"]]
         let mockProductData : ProductData = ProductData(dict: mockDataAsDictionary.first!)
         var mockJsonData : Data
         
         do {
             mockJsonData = try JSONSerialization.data(withJSONObject: mockDataAsDictionary, options: .prettyPrinted)
-            let productDataConverted = sut?.convert(data: mockJsonData)
+            let productDataConverted = sut?.convertToDTO(data: mockJsonData)
             
             XCTAssertEqual(productDataConverted, mockProductData)
         } catch {
             XCTAssert(false)
         }
     }
-
+    
+    func testConvert() {
+        let mockProductData = ProductData(dict: ["id": 1, "name": "shirts", "brand": "Tommy Hilfiger", "price": 80, "currency": "€", "image": "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg", "_link": "http://bestsecret-recruitment-api.herokuapp.com/products/1", "_type": "product"])
+        let mockProductDomain = ProductDomain(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")
+        
+        let productDomain = sut?.convert(dto: mockProductData)
+        
+        XCTAssertEqual(mockProductDomain, productDomain)
+    }
 }
 

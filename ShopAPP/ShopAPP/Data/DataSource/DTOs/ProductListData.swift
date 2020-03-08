@@ -18,6 +18,10 @@ class ProductListData {
     func addProductDataToList(productData: ProductData){
         arrayProductData.append(productData)
     }
+    
+    func getAllProductData() -> [ProductData]{
+        return arrayProductData
+    }
 }
 extension ProductListData : Equatable {
     static func == (lhs: ProductListData, rhs: ProductListData) -> Bool {

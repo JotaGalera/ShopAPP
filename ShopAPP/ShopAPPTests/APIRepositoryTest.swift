@@ -4,10 +4,11 @@ import XCTest
 class APIRepositoryTest: XCTestCase {
 
     var sut : APIRepository?
+    let mockedDataSource = MockedAPIDataSource()
     
     override func setUp() {
         super.setUp()
-        sut = APIRepositoryImplementation()
+        sut = APIRepositoryImplementation(dataSource: mockedDataSource)
     }
 
     override func tearDown() {
@@ -18,13 +19,12 @@ class APIRepositoryTest: XCTestCase {
     func testGetProductList() {
         let expectation = XCTestExpectation(description: "Completion triggered")
         let productListEmpty = ProductList(arrayProducts: [ProductDomain(name: "", brand: "", price: 0, currency: "", image: "")])
-        let mockedAPIDataSource = MockedAPIDataSource()
         
         sut?.getProductList(completion: { product in
             expectation.fulfill()
         })
         
-        XCTAssertEqual(mockedAPIDataSource.called, true)
+        XCTAssertEqual(mockedDataSource.called, true)
     }
 
 }
