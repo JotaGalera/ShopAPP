@@ -25,6 +25,8 @@
 		894FF4D1241470DA00C2860F /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FF4D0241470DA00C2860F /* ProductData.swift */; };
 		8955409824118AFE00821BBB /* getProductsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409724118AFE00821BBB /* getProductsList.swift */; };
 		8955409B24118B9C00821BBB /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409A24118B9C00821BBB /* GetProductListUseCase.swift */; };
+		897E3F3A2415632F002D9712 /* ProductDataListMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */; };
+		897E3F3C2415637B002D9712 /* ProductListDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E3F3B2415637B002D9712 /* ProductListDataMapper.swift */; };
 		89F76D052412BEAB0005DED6 /* APIRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */; };
 		89F76D092412C0900005DED6 /* APIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F76D082412C0900005DED6 /* APIRepository.swift */; };
 		C0C18786C842E15E6D322DE9 /* Pods_ShopAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8FDCDC9D2A04B77E72B1AB /* Pods_ShopAPPTests.framework */; };
@@ -67,6 +69,8 @@
 		894FF4D0241470DA00C2860F /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		8955409724118AFE00821BBB /* getProductsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getProductsList.swift; sourceTree = "<group>"; };
 		8955409A24118B9C00821BBB /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
+		897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataListMapperTest.swift; sourceTree = "<group>"; };
+		897E3F3B2415637B002D9712 /* ProductListDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataMapper.swift; sourceTree = "<group>"; };
 		89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepositoryTest.swift; sourceTree = "<group>"; };
 		89F76D082412C0900005DED6 /* APIRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepository.swift; sourceTree = "<group>"; };
 		A12D836FB1BFEAB05BDD207E /* Pods-ShopAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopAPP.release.xcconfig"; path = "Target Support Files/Pods-ShopAPP/Pods-ShopAPP.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		893A2B382411692F00027759 /* ShopAPPTests */ = {
 			isa = PBXGroup;
 			children = (
+				897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */,
 				894FF4CA241469A400C2860F /* ProductDataMapperTest.swift */,
 				8907A7B124140186002D21A3 /* APIDataSourceTest.swift */,
 				89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */,
@@ -213,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				894FF4CC24146BB200C2860F /* ProductDataMapper.swift */,
+				897E3F3B2415637B002D9712 /* ProductListDataMapper.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 				893A2B472411713E00027759 /* Product.swift in Sources */,
 				893A2B232411692C00027759 /* AppDelegate.swift in Sources */,
 				893A2B252411692C00027759 /* SceneDelegate.swift in Sources */,
+				897E3F3C2415637B002D9712 /* ProductListDataMapper.swift in Sources */,
 				894FF4D1241470DA00C2860F /* ProductData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +438,7 @@
 			files = (
 				8955409824118AFE00821BBB /* getProductsList.swift in Sources */,
 				893A2B3A2411692F00027759 /* ShopAPPTests.swift in Sources */,
+				897E3F3A2415632F002D9712 /* ProductDataListMapperTest.swift in Sources */,
 				89F76D052412BEAB0005DED6 /* APIRepositoryTest.swift in Sources */,
 				8907A7B224140186002D21A3 /* APIDataSourceTest.swift in Sources */,
 				894FF4CB241469A400C2860F /* ProductDataMapperTest.swift in Sources */,

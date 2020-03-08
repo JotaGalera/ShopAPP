@@ -29,7 +29,7 @@ struct ProductData {
         self._type = dict["_type"] as? String ?? " "
     }
 }
-extension ProductData : Equatable {
+extension ProductData : Equatable {
     static func ==(lhs: ProductData, rhs: ProductData)->Bool{
         return lhs.id == rhs.id &&
             lhs.name == rhs.name &&

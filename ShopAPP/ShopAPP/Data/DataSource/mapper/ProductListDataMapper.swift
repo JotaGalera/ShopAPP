@@ -1,5 +1,5 @@
 //
-//  ProductListMapper.swift
+//  ProductListDataMapper.swift
 //  ShopAPP
 //
 //  Created by Javier Galera Garrido on 08/03/2020.
@@ -8,22 +8,21 @@
 
 import Foundation
 
-class ProductDataMapper {
-    func convert(dict: [String:Any] ) -> ProductData{
-        return ProductData(dict: dict)
-    }
+class ProductListDataMapper {
+    private let productDataMapper = ProductDataMapper()
     
-    func convert(data: Data) -> ProductData?{
-        var productData: ProductData?
+    func convert(data: Data) -> ProductListData?{
+        let productDataList = ProductListData(arrayProductData: [])
         
         if let json = try? JSONSerialization.jsonObject(with: data, options: []){
             guard let array = json as? [Any] else { return nil}
             for item in array{
                 if let itemDict = item as? [String:Any]{
-                    productData = ProductData(dict: itemDict)
+                    let productData = productDataMapper.convert(dict: itemDict)
+                    productDataList.addProductDataToList(productData: productData)
                 }
             }
         }
-        return productData
+        return productDataList
     }
 }
