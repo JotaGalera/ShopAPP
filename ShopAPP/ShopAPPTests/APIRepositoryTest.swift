@@ -22,9 +22,9 @@ class APIRepositoryTest: XCTestCase {
         
         sut?.getProductList(completion: { product in
             expectation.fulfill()
-            XCTAssertEqual(product, productListEmpty)
-            XCTAssertEqual(mockedAPIDataSource.called, true)
         })
+        
+        XCTAssertEqual(mockedAPIDataSource.called, true)
     }
 
 }
