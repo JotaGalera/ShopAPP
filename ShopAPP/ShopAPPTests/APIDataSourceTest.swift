@@ -1,11 +1,3 @@
-//
-//  APIDataSourceTest.swift
-//  ShopAPPTests
-//
-//  Created by Javier Galera Garrido on 07/03/2020.
-//  Copyright © 2020 Javier Galera Garrido. All rights reserved.
-//
-
 import XCTest
 @testable import ShopAPP
 
