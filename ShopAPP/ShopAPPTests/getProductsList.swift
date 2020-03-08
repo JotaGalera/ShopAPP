@@ -3,11 +3,11 @@ import XCTest
 
 class GetProductsListTest: XCTestCase {
     var sut : GetProductListUseCase?
-    fileprivate var mockedAPIRepository : mockedAPIRepository?
+    fileprivate var mockedAPIRepository = MockedAPIRepository()
     
     override func setUp() {
         super.setUp()
-        sut = GetProductListUseCaseImplementation()
+        sut = GetProductListUseCaseImplementation(repository: mockedAPIRepository)
     }
 
     override func tearDown() {
@@ -21,11 +21,11 @@ class GetProductsListTest: XCTestCase {
         sut?.execute(completion: { product in
             expectation.fulfill()
         })
-        XCTAssertEqual(self.mockedAPIRepository?.called, true)
+        XCTAssertEqual(self.mockedAPIRepository.called, true)
     }
 }
 
-fileprivate class mockedAPIRepository : APIRepository{
+fileprivate class MockedAPIRepository : APIRepository{
     var called = false
     
     func getProductList(completion: @escaping (ProductList) -> ()) {
