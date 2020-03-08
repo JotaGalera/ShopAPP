@@ -17,6 +17,17 @@ struct ProductData {
     let image: String
     let _link: String
     let _type: String
+    
+    init(dict: [String:Any]){
+        self.id = dict["id"] as? Int ?? 0
+        self.name = dict["name"] as? String ?? " "
+        self.brand = dict["brand"] as? String ?? " "
+        self.price = dict["price"] as? Int ?? 0
+        self.currency = dict["currency"] as? String ?? " "
+        self.image = dict["image"] as? String ?? " "
+        self._link = dict["_link"] as? String ?? " "
+        self._type = dict["_type"] as? String ?? " "
+    }
 }
 extension ProductData : Equatable {
     static func ==(lhs: ProductData, rhs: ProductData)->Bool{

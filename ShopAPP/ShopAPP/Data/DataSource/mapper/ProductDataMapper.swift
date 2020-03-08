@@ -9,8 +9,24 @@
 import Foundation
 
 class ProductDataMapper {
-    func convert(data: Data) -> ProductData{
+    func convert(dict: [String:Any] ) -> ProductData{
+        return ProductData(dict: dict)
+    }
+    
+    func convert(data: Data) -> [ProductData]?{
+        var productDataList = [ProductData]()
         
-        return ProductData(id: 1, name: " ", brand: " ", price: 1, currency: " ", image: " ", _link: " ", _type: " ")
+        if let json = try? JSONSerialization.jsonObject(with: data, options: []){
+            guard let array = json as? [Any] else { return nil}
+            for item in array{
+                if let itemDict = item as? [String:Any]{
+                    let productData = convert(dict: itemDict)
+                    productDataList.append(productData)
+                    
+                }
+            }
+        }
+        print (productDataList)
+        return productDataList
     }
 }
