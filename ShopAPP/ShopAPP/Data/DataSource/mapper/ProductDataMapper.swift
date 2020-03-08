@@ -8,8 +8,9 @@
 
 import Foundation
 
-class ProductListMapper {
-    func convert(data: Data) -> ProductListData{
+class ProductDataMapper {
+    func convert(data: Data) -> ProductData{
         
+        return ProductData(id: 1, name: " ", brand: " ", price: 1, currency: " ", image: " ", _link: " ", _type: " ")
     }
 }
