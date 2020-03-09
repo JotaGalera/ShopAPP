@@ -28,6 +28,9 @@
 		8963E4E82416CC0900ECC7B5 /* APIDataSourceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4E72416CC0900ECC7B5 /* APIDataSourceConfig.swift */; };
 		8963E4EF2416D08100ECC7B5 /* ProductListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */; };
 		8963E4F12416D0C000ECC7B5 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */; };
+		8963E4F32416D8E500ECC7B5 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4F22416D8E500ECC7B5 /* ProductListViewController.swift */; };
+		8963E4F52416DA6B00ECC7B5 /* ProductListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4F42416DA6B00ECC7B5 /* ProductListConfigurator.swift */; };
+		8963E4F72416DB7600ECC7B5 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8963E4F62416DB7600ECC7B5 /* ProductListViewController.xib */; };
 		897E3F3A2415632F002D9712 /* ProductDataListMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */; };
 		897E3F3C2415637B002D9712 /* ProductListDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E3F3B2415637B002D9712 /* ProductListDataMapper.swift */; };
 		89F76D052412BEAB0005DED6 /* APIRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */; };
@@ -75,6 +78,9 @@
 		8963E4E72416CC0900ECC7B5 /* APIDataSourceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIDataSourceConfig.swift; path = ShopAPP/Data/Utils/APIDataSourceConfig.swift; sourceTree = SOURCE_ROOT; };
 		8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTest.swift; sourceTree = "<group>"; };
 		8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
+		8963E4F22416D8E500ECC7B5 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		8963E4F42416DA6B00ECC7B5 /* ProductListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListConfigurator.swift; sourceTree = "<group>"; };
+		8963E4F62416DB7600ECC7B5 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
 		897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataListMapperTest.swift; sourceTree = "<group>"; };
 		897E3F3B2415637B002D9712 /* ProductListDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataMapper.swift; sourceTree = "<group>"; };
 		89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepositoryTest.swift; sourceTree = "<group>"; };
@@ -285,6 +291,9 @@
 			isa = PBXGroup;
 			children = (
 				8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */,
+				8963E4F22416D8E500ECC7B5 /* ProductListViewController.swift */,
+				8963E4F42416DA6B00ECC7B5 /* ProductListConfigurator.swift */,
+				8963E4F62416DB7600ECC7B5 /* ProductListViewController.xib */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 			files = (
 				893A2B2F2411692F00027759 /* LaunchScreen.storyboard in Resources */,
 				893A2B2C2411692F00027759 /* Assets.xcassets in Resources */,
+				8963E4F72416DB7600ECC7B5 /* ProductListViewController.xib in Resources */,
 				893A2B2A2411692C00027759 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +481,8 @@
 				8963E4E62416CBAF00ECC7B5 /* APIDataSource.swift in Sources */,
 				893A2B492411758B00027759 /* ProductList.swift in Sources */,
 				89F76D092412C0900005DED6 /* APIRepository.swift in Sources */,
+				8963E4F52416DA6B00ECC7B5 /* ProductListConfigurator.swift in Sources */,
+				8963E4F32416D8E500ECC7B5 /* ProductListViewController.swift in Sources */,
 				8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */,
 				894FF4CD24146BB200C2860F /* ProductDataMapper.swift in Sources */,
 				893A2B472411713E00027759 /* Product.swift in Sources */,

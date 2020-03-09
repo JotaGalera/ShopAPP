@@ -6,6 +6,7 @@ protocol ProductListPresenter {
 
 class ProductListPresenterImplementation : ProductListPresenter {
     private var getProductListUseCase: GetProductListUseCase
+    private var view : ProductListView?
     
     init( getProductListUseCase: GetProductListUseCase = GetProductListUseCaseImplementation() ){
         self.getProductListUseCase = getProductListUseCase
@@ -13,7 +14,13 @@ class ProductListPresenterImplementation : ProductListPresenter {
     
     func getProductList(){
         self.getProductListUseCase.execute(completion: { productList in
-            print(productList)
+            let product = productList.getProductToList(index: 0)
+            
+            self.view?.setLabel(text: product.name)
         })
+    }
+    
+    func setupView(_ view: ProductListView){
+        self.view = view
     }
 }
