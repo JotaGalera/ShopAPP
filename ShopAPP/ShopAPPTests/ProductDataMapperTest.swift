@@ -2,7 +2,6 @@ import XCTest
 @testable import ShopAPP
 
 class ProductDataMapperTest: XCTestCase {
-
     var sut : ProductDataMapper?
     
     override func setUp() {

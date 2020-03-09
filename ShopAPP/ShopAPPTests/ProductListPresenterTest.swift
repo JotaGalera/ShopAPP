@@ -2,7 +2,6 @@ import XCTest
 @testable import ShopAPP
 
 class ProductListPresenterTest: XCTestCase {
-
     var sut : ProductListPresenter?
     fileprivate let mockedGetProductListUseCaseImplementation = MockedGetProductListUseCaseImplementation()
     
@@ -21,8 +20,6 @@ class ProductListPresenterTest: XCTestCase {
         
         XCTAssertEqual(mockedGetProductListUseCaseImplementation.called, true)
     }
-
-    
 }
 fileprivate class MockedGetProductListUseCaseImplementation : GetProductListUseCaseImplementation {
     var called = false

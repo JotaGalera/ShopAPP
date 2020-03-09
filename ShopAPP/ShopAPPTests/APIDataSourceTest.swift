@@ -2,7 +2,6 @@ import XCTest
 @testable import ShopAPP
 
 class APIDataSourceTest: XCTestCase {
-    
     var sut : APIDataSource?
     
     override func setUp() {
