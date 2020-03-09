@@ -22,5 +22,6 @@ class ProductListPresenterImplementation : ProductListPresenter {
     
     func setupView(_ view: ProductListView){
         self.view = view
+        getProductList()
     }
 }

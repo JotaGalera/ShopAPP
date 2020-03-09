@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/javiergaleragarrido/Desktop/SHOP/ShopAPP/ShopAPP/ShopAPP/Design/Features/ProductList/Scene/ProductListViewController.xib">
+   </FileRef>
+   <FileRef
       location = "group:ShopAPP.xcodeproj">
    </FileRef>
    <FileRef
