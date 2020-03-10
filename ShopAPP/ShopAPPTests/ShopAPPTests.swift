@@ -22,4 +22,12 @@ class ProductListTest: XCTestCase {
         
         XCTAssertEqual(sut?.getProductToList(index: 0), mockProduct)
     }
+    
+    func testCount(){
+        let mockProduct = ProductDomain(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")
+        
+        sut?.addProductsToList(product: mockProduct)
+        
+        XCTAssertEqual(sut?.count(), 1)
+    }
 }

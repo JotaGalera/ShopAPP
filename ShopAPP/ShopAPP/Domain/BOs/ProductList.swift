@@ -1,6 +1,6 @@
 import Foundation
 
-class ProductList : Equatable{
+class ProductList{
     private var arrayProducts: [ProductDomain] = []
    
     init (arrayProducts: [ProductDomain]) {
@@ -15,6 +15,11 @@ class ProductList : Equatable{
         return arrayProducts[index]
     }
     
+    func count() -> Int {
+        return arrayProducts.count
+    }
+}
+extension ProductList : Equatable {
     static func == (lhs: ProductList, rhs: ProductList) -> Bool {
         return lhs.arrayProducts == rhs.arrayProducts
     }

@@ -15,8 +15,7 @@ class ProductListPresenterImplementation : ProductListPresenter {
     func getProductList(){
         
         self.getProductListUseCase.execute(completion: { productList in
-            let product = productList.getProductToList(index: 0)
-            self.view?.setLabel(text: product.name)
+            self.view?.showProduct(productListDomain: productList)
         })
         
     }

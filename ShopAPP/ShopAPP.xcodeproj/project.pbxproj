@@ -10,6 +10,10 @@
 		8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */; };
 		8907A7B224140186002D21A3 /* APIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907A7B124140186002D21A3 /* APIDataSourceTest.swift */; };
 		8929E64A24180E2000D6A6C4 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8963E4FA2416FA9A00ECC7B5 /* ProductListViewController.xib */; };
+		8929E64F2418209D00D6A6C4 /* ProductDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8929E64E2418209D00D6A6C4 /* ProductDesign.swift */; };
+		8929E651241820ED00D6A6C4 /* ProductListDesignTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8929E650241820ED00D6A6C4 /* ProductListDesignTest.swift */; };
+		8929E654241826A800D6A6C4 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8929E653241826A800D6A6C4 /* ProductCell.xib */; };
+		8929E656241826BA00D6A6C4 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8929E655241826BA00D6A6C4 /* ProductCell.swift */; };
 		893A2B232411692C00027759 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B222411692C00027759 /* AppDelegate.swift */; };
 		893A2B252411692C00027759 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893A2B242411692C00027759 /* SceneDelegate.swift */; };
 		893A2B2C2411692F00027759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 893A2B2B2411692F00027759 /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 		4A8FDCDC9D2A04B77E72B1AB /* Pods_ShopAPPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopAPPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepositoryImplementation.swift; sourceTree = "<group>"; };
 		8907A7B124140186002D21A3 /* APIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSourceTest.swift; sourceTree = "<group>"; };
+		8929E64E2418209D00D6A6C4 /* ProductDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDesign.swift; sourceTree = "<group>"; };
+		8929E650241820ED00D6A6C4 /* ProductListDesignTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDesignTest.swift; sourceTree = "<group>"; };
+		8929E653241826A800D6A6C4 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		8929E655241826BA00D6A6C4 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		893A2B1F2411692C00027759 /* ShopAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		893A2B222411692C00027759 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		893A2B242411692C00027759 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,8 +165,18 @@
 		8929E64B24181F8400D6A6C4 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				8929E64E2418209D00D6A6C4 /* ProductDesign.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		8929E6522418269300D6A6C4 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8929E653241826A800D6A6C4 /* ProductCell.xib */,
+				8929E655241826BA00D6A6C4 /* ProductCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		893A2B162411692C00027759 = {
@@ -199,6 +217,7 @@
 		893A2B382411692F00027759 /* ShopAPPTests */ = {
 			isa = PBXGroup;
 			children = (
+				8929E650241820ED00D6A6C4 /* ProductListDesignTest.swift */,
 				8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */,
 				897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */,
 				894FF4CA241469A400C2860F /* ProductDataMapperTest.swift */,
@@ -283,6 +302,7 @@
 		8963E4EC2416CDCE00ECC7B5 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				8929E64B24181F8400D6A6C4 /* models */,
 				8963E4ED2416CE8000ECC7B5 /* Scene */,
 			);
 			path = ProductList;
@@ -291,7 +311,7 @@
 		8963E4ED2416CE8000ECC7B5 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8929E64B24181F8400D6A6C4 /* models */,
+				8929E6522418269300D6A6C4 /* cell */,
 				8963E4FA2416FA9A00ECC7B5 /* ProductListViewController.xib */,
 				8963E4F22416D8E500ECC7B5 /* ProductListViewController.swift */,
 				8963E4F42416DA6B00ECC7B5 /* ProductListConfigurator.swift */,
@@ -393,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				893A2B2F2411692F00027759 /* LaunchScreen.storyboard in Resources */,
+				8929E654241826A800D6A6C4 /* ProductCell.xib in Resources */,
 				8929E64A24180E2000D6A6C4 /* ProductListViewController.xib in Resources */,
 				893A2B2C2411692F00027759 /* Assets.xcassets in Resources */,
 			);
@@ -480,6 +501,7 @@
 				894FF4CF24146D1C00C2860F /* ProductListData.swift in Sources */,
 				8963E4E62416CBAF00ECC7B5 /* APIDataSource.swift in Sources */,
 				893A2B492411758B00027759 /* ProductList.swift in Sources */,
+				8929E64F2418209D00D6A6C4 /* ProductDesign.swift in Sources */,
 				89F76D092412C0900005DED6 /* APIRepository.swift in Sources */,
 				8963E4F52416DA6B00ECC7B5 /* ProductListConfigurator.swift in Sources */,
 				8963E4F32416D8E500ECC7B5 /* ProductListViewController.swift in Sources */,
@@ -490,6 +512,7 @@
 				8963E4F12416D0C000ECC7B5 /* ProductListPresenter.swift in Sources */,
 				893A2B232411692C00027759 /* AppDelegate.swift in Sources */,
 				893A2B252411692C00027759 /* SceneDelegate.swift in Sources */,
+				8929E656241826BA00D6A6C4 /* ProductCell.swift in Sources */,
 				897E3F3C2415637B002D9712 /* ProductListDataMapper.swift in Sources */,
 				894FF4D1241470DA00C2860F /* ProductData.swift in Sources */,
 			);
@@ -504,6 +527,7 @@
 				8963E4EF2416D08100ECC7B5 /* ProductListPresenterTest.swift in Sources */,
 				897E3F3A2415632F002D9712 /* ProductDataListMapperTest.swift in Sources */,
 				89F76D052412BEAB0005DED6 /* APIRepositoryTest.swift in Sources */,
+				8929E651241820ED00D6A6C4 /* ProductListDesignTest.swift in Sources */,
 				8907A7B224140186002D21A3 /* APIDataSourceTest.swift in Sources */,
 				894FF4CB241469A400C2860F /* ProductDataMapperTest.swift in Sources */,
 			);

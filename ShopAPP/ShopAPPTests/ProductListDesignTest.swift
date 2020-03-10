@@ -1,28 +1,16 @@
 import XCTest
 @testable import ShopAPP
 
-class ProductListDesignTest: XCTestCase {
+class ProductDesignTest: XCTestCase {
 
-    var sut : ProductListDesign?
+    var sut : ProductDesign?
     
-    override func setUp() {
+    func initTest() {
+        let smokeProductDomain : ProductDomain = ProductDomain(name: "name", brand: "brand", price: 1, currency: "currency", image: "image")
         
+        sut = ProductDesign(product: smokeProductDomain)
+        
+        XCTAssertEqual(sut?.nameCell, "name")
+        XCTAssertEqual(sut?.textPriceLabel, "1 currency")
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
