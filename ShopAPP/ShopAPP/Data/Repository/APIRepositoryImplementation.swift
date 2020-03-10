@@ -3,7 +3,6 @@ import Foundation
 class APIRepositoryImplementation : APIRepository {
     private let dataSource : APIDataSource
     private let productListMapper = ProductListDataMapper()
-    var pruebesita = ProductList(arrayProducts: [ProductDomain]())
     
     init(dataSource: APIDataSource = APIDataSourceImplementation()){
         self.dataSource = dataSource
@@ -13,7 +12,6 @@ class APIRepositoryImplementation : APIRepository {
         
         dataSource.getProductList(completion:{ response in
             guard let responseDTO = self.productListMapper.convertToDTO(data: response) else {return}
-            self.pruebesita = self.productListMapper.convert(dto: responseDTO)
             completion(self.productListMapper.convert(dto: responseDTO))
         })
     }

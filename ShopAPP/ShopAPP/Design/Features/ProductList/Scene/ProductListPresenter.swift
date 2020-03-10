@@ -13,11 +13,9 @@ class ProductListPresenterImplementation : ProductListPresenter {
     }
     
     func getProductList(){
-        
         self.getProductListUseCase.execute(completion: { productList in
             self.view?.showProduct(productListDomain: productList)
         })
-        
     }
     
     func setupView(_ view: ProductListView){

@@ -47,7 +47,7 @@ extension ProductListViewController: UITableViewDataSource, UITableViewDelegate 
         let product = productList.getProductToList(index: indexPath.item)
         let productDesign = ProductDesign(product: product)
         cell.setupCell(productDesign: productDesign)
-        
+    
         return cell
     }
 }
