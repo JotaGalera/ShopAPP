@@ -6,7 +6,7 @@ class ProductCell: UITableViewCell {
     @IBOutlet var nameProduct: UILabel!
     @IBOutlet var priceProduct: UILabel!
     @IBOutlet var brandProduct: UILabel!
-    var pictureData : Data?
+    private var pictureData : Data?
     
     func setupCell(productDesign: ProductDesign){
         getData(from: productDesign.imageCell, completion: { data,response,error  in
@@ -17,7 +17,6 @@ class ProductCell: UITableViewCell {
             }
             
         })
-        
         nameProduct.text = productDesign.nameCell
         brandProduct.text = productDesign.textBrandLabel
         priceProduct.text = productDesign.textPriceLabel

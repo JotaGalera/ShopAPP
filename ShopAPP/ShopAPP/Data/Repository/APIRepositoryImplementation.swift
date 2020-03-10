@@ -9,7 +9,6 @@ class APIRepositoryImplementation : APIRepository {
     }
     
     func getProductList(completion: @escaping (ProductList) -> ()) {
-        
         dataSource.getProductList(completion:{ response in
             guard let responseDTO = self.productListMapper.convertToDTO(data: response) else {return}
             completion(self.productListMapper.convert(dto: responseDTO))

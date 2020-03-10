@@ -6,9 +6,9 @@ protocol ProductListView: class {
 
 class ProductListViewController : UIViewController {
     var presenter: ProductListPresenterImplementation?
-    let configurator = ProductListConfigurator()
-    var productList : ProductList = ProductList(arrayProducts: [ProductDomain]())
-    let cellIdentifier = "ProductCell"
+    private let configurator = ProductListConfigurator()
+    private var productList : ProductList = ProductList(arrayProducts: [ProductDomain]())
+    private let cellIdentifier = "ProductCell"
     
     @IBOutlet var tableProduct: UITableView!
     
@@ -18,13 +18,13 @@ class ProductListViewController : UIViewController {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     private func setupView(){
         presenter?.setupView(self)
         setupTableView()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
     
     private func setupTableView(){
