@@ -7,12 +7,11 @@ class ProductListDataMapper {
         let productDataList = ProductListData(arrayProductData: [])
         
         if let json = try? JSONSerialization.jsonObject(with: data, options: []){
-            guard let array = json as? [Any] else { return nil}
-            for item in array{
-                if let itemDict = item as? [String:Any]{
-                    let productData = productDataMapper.convertToDTO(dict: itemDict)
-                    productDataList.addProductDataToList(productData: productData)
-                }
+            guard let array = json as? [String:Any] else { return nil }
+            guard let elements = array["list"] as? [[String:Any]] else { return nil }
+            for item in elements{
+                let productData = productDataMapper.convertToDTO(dict: item)
+                productDataList.addProductDataToList(productData: productData)
             }
         }
         return productDataList

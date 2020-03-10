@@ -10,6 +10,7 @@ class ProductListViewController : UIViewController {
     
     @IBOutlet var label: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(controller: self)

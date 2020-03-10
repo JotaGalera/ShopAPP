@@ -15,7 +15,6 @@ class APIDataSourceImplementation : APIDataSource{
             switch response.result {
             case let .success(data):
                 completion(data)
-                
             case let .failure(error):
                 print("error")
             }

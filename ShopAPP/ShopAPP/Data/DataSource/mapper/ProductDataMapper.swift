@@ -7,15 +7,15 @@ class ProductDataMapper {
     
     func convertToDTO(data: Data) -> ProductData{
         var productData: ProductData = ProductData(dict: [:])
-        
-        if let json = try? JSONSerialization.jsonObject(with: data, options: []){
-            guard let array = json as? [Any] else { return productData}
-            for item in array{
-                if let itemDict = item as? [String:Any]{
-                    productData = ProductData(dict: itemDict)
-                }
-            }
-        }
+        //TODO: refactor this
+//        if let json = try? JSONSerialization.jsonObject(with: data, options: []){
+//            guard let array = json as? [Any] else { return productData}
+//            for item in array{
+//                if let itemDict = item as? [String:Any]{
+//                    productData = ProductData(dict: itemDict)
+//                }
+//            }
+//        }
         return productData
     }
     
