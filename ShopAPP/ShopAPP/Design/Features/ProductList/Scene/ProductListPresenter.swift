@@ -13,8 +13,14 @@ class ProductListPresenterImplementation : ProductListPresenter {
     }
     
     func getProductList(){
-        self.getProductListUseCase.execute(completion: { productList in
+        self.getProductListUseCase.execute(page: 1, pageSize:1, completion: { productList in
             self.view?.showProduct(productListDomain: productList)
+        })
+    }
+    
+    func getNextProductList(){
+        self.getProductListUseCase.execute(page: 2, pageSize:5, completion: { productList in
+            self.view?.showNextListProucts(productListDomain: productList)
         })
     }
     

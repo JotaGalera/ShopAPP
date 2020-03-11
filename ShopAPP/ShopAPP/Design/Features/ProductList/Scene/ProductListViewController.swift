@@ -2,6 +2,7 @@ import UIKit
 
 protocol ProductListView: class {
     func showProduct(productListDomain: ProductList)
+    func showNextListProucts(productListDomain: ProductList)
 }
 
 class ProductListViewController : UIViewController {
@@ -50,10 +51,21 @@ extension ProductListViewController: UITableViewDataSource, UITableViewDelegate 
     
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElement = productList.count() - 1
+        if indexPath.row == lastElement{
+            presenter?.getNextProductList()
+        }
+    }
 }
 extension ProductListViewController: ProductListView{
     func showProduct(productListDomain: ProductList) {
         productList = productListDomain
+        tableProduct.reloadData()
+    }
+    func showNextListProucts(productListDomain: ProductList){
+        productList.addProductsToList(product: productListDomain.getProductToList(index: 0))
         tableProduct.reloadData()
     }
 }

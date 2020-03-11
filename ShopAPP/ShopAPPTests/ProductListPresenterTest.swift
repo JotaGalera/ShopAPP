@@ -24,7 +24,7 @@ class ProductListPresenterTest: XCTestCase {
 fileprivate class MockedGetProductListUseCaseImplementation : GetProductListUseCaseImplementation {
     var called = false
     
-    override func execute(completion: @escaping (ProductList) -> ()) {
+    override func execute(page: Int, pageSize: Int, completion: @escaping (ProductList) -> ()) {
         self.called = true
     }
 }

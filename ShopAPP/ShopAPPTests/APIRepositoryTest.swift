@@ -18,7 +18,7 @@ class APIRepositoryTest: XCTestCase {
     func testGetProductList() {
         let expectation = XCTestExpectation(description: "Completion triggered")
         
-        sut?.getProductList(completion: { product in
+        sut?.getProductList(page: 1, pageSize: 1, completion: { product in
             expectation.fulfill()
         })
         
@@ -29,7 +29,7 @@ class APIRepositoryTest: XCTestCase {
 fileprivate class MockedAPIDataSource : APIDataSource{
     var called = false
     
-    func getProductList( completion: @escaping (Data)->() ){
+    func getProductList(page: Int, pageSize: Int, completion: @escaping (Data) -> ()) {
         self.called = true
     }
 }

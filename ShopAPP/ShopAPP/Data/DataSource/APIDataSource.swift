@@ -2,14 +2,14 @@ import Alamofire
 import Foundation
 
 protocol APIDataSource {
-    func getProductList( completion: @escaping (Data)->() )
+    func getProductList(page:Int, pageSize: Int, completion: @escaping (Data)->() )
 }
 
 class APIDataSourceImplementation : APIDataSource{
-    func getProductList( completion: @escaping (Data)->() ){
+    func getProductList(page:Int, pageSize: Int, completion: @escaping (Data)->() ){
         let url = APIDataSourceConfig.url
         let header = APIDataSourceConfig.header
-        let parameters : [String: Any] = ["page":1, "pageSize":10]
+        let parameters : [String: Any] = ["page":page, "pageSize":pageSize]
         
         Alamofire.request(url, parameters: parameters, headers: header).validate().responseData { response in
             switch response.result {

@@ -1,5 +1,5 @@
 import Foundation
 
 protocol APIRepository{
-    func getProductList(completion: @escaping (ProductList) -> ())
+    func getProductList(page:Int, pageSize: Int, completion: @escaping (ProductList) -> ())
 }

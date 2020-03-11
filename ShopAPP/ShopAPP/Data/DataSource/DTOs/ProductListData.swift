@@ -11,6 +11,7 @@ import Foundation
 class ProductListData {
     var arrayProductData : [ProductData] = []
     
+    
     init(arrayProductData: [ProductData]){
         self.arrayProductData = arrayProductData
     }
