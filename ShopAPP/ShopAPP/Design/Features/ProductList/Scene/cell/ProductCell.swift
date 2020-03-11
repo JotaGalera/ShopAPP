@@ -9,9 +9,8 @@ class ProductCell: UITableViewCell {
     private var pictureData : Data?
     
     func setupCell(productDesign: ProductDesign){
-        getData(from: productDesign.imageCell, completion: { data,response,error  in
+        self.imageProduct.getData(from: productDesign.imageCell, completion: { data,response,error  in
             guard let imageData = data  else { return }
-            
             DispatchQueue.main.sync {
                 self.imageProduct.image = UIImage(data: imageData)
             }
@@ -20,10 +19,5 @@ class ProductCell: UITableViewCell {
         nameProduct.text = productDesign.nameCell
         brandProduct.text = productDesign.textBrandLabel
         priceProduct.text = productDesign.textPriceLabel
-    }
-    
-    private func getData(from urlString: String, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        guard let url = URL(string: urlString) else { return }
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 }

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356501D42418CE1C00FB4E6B /* APIDataSourceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356501D32418CE1C00FB4E6B /* APIDataSourceConfig.swift */; };
+		356501D62418CEB400FB4E6B /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356501D52418CEB400FB4E6B /* ProductListViewController.xib */; };
+		356501D92418D3AB00FB4E6B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356501D82418D3AB00FB4E6B /* UIViewExtension.swift */; };
 		8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */; };
 		8907A7B224140186002D21A3 /* APIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907A7B124140186002D21A3 /* APIDataSourceTest.swift */; };
-		8929E64A24180E2000D6A6C4 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8963E4FA2416FA9A00ECC7B5 /* ProductListViewController.xib */; };
 		8929E64F2418209D00D6A6C4 /* ProductDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8929E64E2418209D00D6A6C4 /* ProductDesign.swift */; };
 		8929E651241820ED00D6A6C4 /* ProductListDesignTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8929E650241820ED00D6A6C4 /* ProductListDesignTest.swift */; };
 		8929E654241826A800D6A6C4 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8929E653241826A800D6A6C4 /* ProductCell.xib */; };
@@ -28,7 +30,6 @@
 		8955409824118AFE00821BBB /* getProductsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409724118AFE00821BBB /* getProductsList.swift */; };
 		8955409B24118B9C00821BBB /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409A24118B9C00821BBB /* GetProductListUseCase.swift */; };
 		8963E4E62416CBAF00ECC7B5 /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4E52416CBAF00ECC7B5 /* APIDataSource.swift */; };
-		8963E4E82416CC0900ECC7B5 /* APIDataSourceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4E72416CC0900ECC7B5 /* APIDataSourceConfig.swift */; };
 		8963E4EF2416D08100ECC7B5 /* ProductListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */; };
 		8963E4F12416D0C000ECC7B5 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */; };
 		8963E4F32416D8E500ECC7B5 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4F22416D8E500ECC7B5 /* ProductListViewController.swift */; };
@@ -54,6 +55,9 @@
 /* Begin PBXFileReference section */
 		241E6AE6C07AD7ADA1AC1844 /* Pods-ShopAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopAPP.debug.xcconfig"; path = "Target Support Files/Pods-ShopAPP/Pods-ShopAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		2F35D19E3C99703879DA332A /* Pods-ShopAPPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopAPPTests.release.xcconfig"; path = "Target Support Files/Pods-ShopAPPTests/Pods-ShopAPPTests.release.xcconfig"; sourceTree = "<group>"; };
+		356501D32418CE1C00FB4E6B /* APIDataSourceConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDataSourceConfig.swift; sourceTree = "<group>"; };
+		356501D52418CEB400FB4E6B /* ProductListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductListViewController.xib; path = ShopAPP/Design/Features/ProductList/Scene/ProductListViewController.xib; sourceTree = SOURCE_ROOT; };
+		356501D82418D3AB00FB4E6B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		4A8FDCDC9D2A04B77E72B1AB /* Pods_ShopAPPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopAPPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8907A7AB2413F67B002D21A3 /* APIRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepositoryImplementation.swift; sourceTree = "<group>"; };
 		8907A7B124140186002D21A3 /* APIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSourceTest.swift; sourceTree = "<group>"; };
@@ -79,12 +83,10 @@
 		8955409724118AFE00821BBB /* getProductsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getProductsList.swift; sourceTree = "<group>"; };
 		8955409A24118B9C00821BBB /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
 		8963E4E52416CBAF00ECC7B5 /* APIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
-		8963E4E72416CC0900ECC7B5 /* APIDataSourceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIDataSourceConfig.swift; path = ShopAPP/Data/Utils/APIDataSourceConfig.swift; sourceTree = SOURCE_ROOT; };
 		8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTest.swift; sourceTree = "<group>"; };
 		8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
 		8963E4F22416D8E500ECC7B5 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		8963E4F42416DA6B00ECC7B5 /* ProductListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListConfigurator.swift; sourceTree = "<group>"; };
-		8963E4FA2416FA9A00ECC7B5 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProductListViewController.xib; path = /Users/javiergaleragarrido/Desktop/SHOP/ShopAPP/ShopAPP/ShopAPP/Design/Features/ProductList/Scene/ProductListViewController.xib; sourceTree = "<absolute>"; };
 		897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataListMapperTest.swift; sourceTree = "<group>"; };
 		897E3F3B2415637B002D9712 /* ProductListDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataMapper.swift; sourceTree = "<group>"; };
 		89F76D042412BEAB0005DED6 /* APIRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRepositoryTest.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		356501D72418D38800FB4E6B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				356501D82418D3AB00FB4E6B /* UIViewExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		6AB36AE34C7D53BD596D7329 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,7 +288,7 @@
 		8963E4E92416CCCE00ECC7B5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8963E4E72416CC0900ECC7B5 /* APIDataSourceConfig.swift */,
+				356501D32418CE1C00FB4E6B /* APIDataSourceConfig.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -286,6 +296,7 @@
 		8963E4EA2416CD9E00ECC7B5 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				356501D72418D38800FB4E6B /* Utils */,
 				8963E4EB2416CDC100ECC7B5 /* Features */,
 			);
 			path = Design;
@@ -312,7 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				8929E6522418269300D6A6C4 /* cell */,
-				8963E4FA2416FA9A00ECC7B5 /* ProductListViewController.xib */,
+				356501D52418CEB400FB4E6B /* ProductListViewController.xib */,
 				8963E4F22416D8E500ECC7B5 /* ProductListViewController.swift */,
 				8963E4F42416DA6B00ECC7B5 /* ProductListConfigurator.swift */,
 				8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */,
@@ -414,7 +425,7 @@
 			files = (
 				893A2B2F2411692F00027759 /* LaunchScreen.storyboard in Resources */,
 				8929E654241826A800D6A6C4 /* ProductCell.xib in Resources */,
-				8929E64A24180E2000D6A6C4 /* ProductListViewController.xib in Resources */,
+				356501D62418CEB400FB4E6B /* ProductListViewController.xib in Resources */,
 				893A2B2C2411692F00027759 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8955409B24118B9C00821BBB /* GetProductListUseCase.swift in Sources */,
+				356501D42418CE1C00FB4E6B /* APIDataSourceConfig.swift in Sources */,
 				894FF4CF24146D1C00C2860F /* ProductListData.swift in Sources */,
 				8963E4E62416CBAF00ECC7B5 /* APIDataSource.swift in Sources */,
 				893A2B492411758B00027759 /* ProductList.swift in Sources */,
@@ -508,8 +520,8 @@
 				8907A7AC2413F67B002D21A3 /* APIRepositoryImplementation.swift in Sources */,
 				894FF4CD24146BB200C2860F /* ProductDataMapper.swift in Sources */,
 				893A2B472411713E00027759 /* Product.swift in Sources */,
-				8963E4E82416CC0900ECC7B5 /* APIDataSourceConfig.swift in Sources */,
 				8963E4F12416D0C000ECC7B5 /* ProductListPresenter.swift in Sources */,
+				356501D92418D3AB00FB4E6B /* UIViewExtension.swift in Sources */,
 				893A2B232411692C00027759 /* AppDelegate.swift in Sources */,
 				893A2B252411692C00027759 /* SceneDelegate.swift in Sources */,
 				8929E656241826BA00D6A6C4 /* ProductCell.swift in Sources */,
