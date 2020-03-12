@@ -29,6 +29,8 @@
 		894FF4D1241470DA00C2860F /* ProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FF4D0241470DA00C2860F /* ProductData.swift */; };
 		8955409824118AFE00821BBB /* getProductsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409724118AFE00821BBB /* getProductsList.swift */; };
 		8955409B24118B9C00821BBB /* GetProductListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8955409A24118B9C00821BBB /* GetProductListUseCase.swift */; };
+		896019DE2419B58400C157EC /* GetProductDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896019DD2419B58400C157EC /* GetProductDetailUseCase.swift */; };
+		896019E02419B6CB00C157EC /* GetProductDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896019DF2419B6CB00C157EC /* GetProductDetailTest.swift */; };
 		8963E4E62416CBAF00ECC7B5 /* APIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4E52416CBAF00ECC7B5 /* APIDataSource.swift */; };
 		8963E4EF2416D08100ECC7B5 /* ProductListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */; };
 		8963E4F12416D0C000ECC7B5 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */; };
@@ -82,6 +84,8 @@
 		894FF4D0241470DA00C2860F /* ProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductData.swift; sourceTree = "<group>"; };
 		8955409724118AFE00821BBB /* getProductsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getProductsList.swift; sourceTree = "<group>"; };
 		8955409A24118B9C00821BBB /* GetProductListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductListUseCase.swift; sourceTree = "<group>"; };
+		896019DD2419B58400C157EC /* GetProductDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductDetailUseCase.swift; sourceTree = "<group>"; };
+		896019DF2419B6CB00C157EC /* GetProductDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductDetailTest.swift; sourceTree = "<group>"; };
 		8963E4E52416CBAF00ECC7B5 /* APIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSource.swift; sourceTree = "<group>"; };
 		8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenterTest.swift; sourceTree = "<group>"; };
 		8963E4F02416D0C000ECC7B5 /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 		893A2B382411692F00027759 /* ShopAPPTests */ = {
 			isa = PBXGroup;
 			children = (
+				896019DF2419B6CB00C157EC /* GetProductDetailTest.swift */,
 				8929E650241820ED00D6A6C4 /* ProductListDesignTest.swift */,
 				8963E4EE2416D08100ECC7B5 /* ProductListPresenterTest.swift */,
 				897E3F392415632F002D9712 /* ProductDataListMapperTest.swift */,
@@ -272,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				8955409A24118B9C00821BBB /* GetProductListUseCase.swift */,
+				896019DD2419B58400C157EC /* GetProductDetailUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -509,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8955409B24118B9C00821BBB /* GetProductListUseCase.swift in Sources */,
+				896019DE2419B58400C157EC /* GetProductDetailUseCase.swift in Sources */,
 				356501D42418CE1C00FB4E6B /* APIDataSourceConfig.swift in Sources */,
 				894FF4CF24146D1C00C2860F /* ProductListData.swift in Sources */,
 				8963E4E62416CBAF00ECC7B5 /* APIDataSource.swift in Sources */,
@@ -537,6 +544,7 @@
 				8955409824118AFE00821BBB /* getProductsList.swift in Sources */,
 				893A2B3A2411692F00027759 /* ShopAPPTests.swift in Sources */,
 				8963E4EF2416D08100ECC7B5 /* ProductListPresenterTest.swift in Sources */,
+				896019E02419B6CB00C157EC /* GetProductDetailTest.swift in Sources */,
 				897E3F3A2415632F002D9712 /* ProductDataListMapperTest.swift in Sources */,
 				89F76D052412BEAB0005DED6 /* APIRepositoryTest.swift in Sources */,
 				8929E651241820ED00D6A6C4 /* ProductListDesignTest.swift in Sources */,
