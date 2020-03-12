@@ -14,4 +14,9 @@ class APIRepositoryImplementation : APIRepository {
             completion(self.productListMapper.convert(dto: responseDTO))
         })
     }
+    
+    func getProductDetail(id: Int, completion: @escaping (ProductList) -> ()) {
+        return
+    }
+    
 }

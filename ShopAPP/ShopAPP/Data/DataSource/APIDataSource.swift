@@ -3,9 +3,12 @@ import Foundation
 
 protocol APIDataSource {
     func getProductList(page:Int, pageSize: Int, completion: @escaping (Data)->() )
+    
 }
 
 class APIDataSourceImplementation : APIDataSource{
+    
+    
     func getProductList(page:Int, pageSize: Int, completion: @escaping (Data)->() ){
         let url = APIDataSourceConfig.url
         let header = APIDataSourceConfig.header
