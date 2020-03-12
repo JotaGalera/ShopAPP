@@ -5,6 +5,7 @@ protocol ProductListView: class {
     func hideLoading()
     func showProduct(productListDomain: ProductList)
     func showNextListProucts(productListDomain: ProductList)
+    func showError(error: String)
 }
 
 class ProductListViewController : UIViewController {
@@ -81,5 +82,10 @@ extension ProductListViewController: ProductListView{
     func showNextListProucts(productListDomain: ProductList){
         productList.addProductListToList(productList: productListDomain)
         tableProduct.reloadData()
+    }
+    func showError( error: String){
+        let alert = UIAlertController(title: "Impossible load data", message: error, preferredStyle: .alert)
+        
+        self.present(alert,animated: true)
     }
 }

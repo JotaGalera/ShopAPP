@@ -2,14 +2,14 @@ import Alamofire
 import Foundation
 
 protocol APIDataSource {
-    func getProductList(page:Int, pageSize: Int, completion: @escaping (Data)->() )
+    func getProductList(page:Int, pageSize: Int, onSuccess: @escaping (Data)->(), onFailure: @escaping (String)->() )
     
 }
 
 class APIDataSourceImplementation : APIDataSource{
     
     
-    func getProductList(page:Int, pageSize: Int, completion: @escaping (Data)->() ){
+    func getProductList(page:Int, pageSize: Int, onSuccess: @escaping (Data)->(), onFailure: @escaping (String)->() ){
         let url = APIDataSourceConfig.url
         let header = APIDataSourceConfig.header
         let parameters : [String: Any] = ["page":page, "pageSize":pageSize]
@@ -17,9 +17,9 @@ class APIDataSourceImplementation : APIDataSource{
         Alamofire.request(url, parameters: parameters, headers: header).validate().responseData { response in
             switch response.result {
             case let .success(data):
-                completion(data)
-            case .failure(_):
-                print("error")
+                onSuccess(data)
+            case let .failure(error):
+                onFailure("tucuTucu")
             }
         }
     }

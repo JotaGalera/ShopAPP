@@ -18,9 +18,10 @@ class GetProductDetailTest: XCTestCase {
     func testExecute() {
         let expectation = XCTestExpectation(description: "Completion triggered")
         
-        sut?.execute(id: 1, completion: {_ in
+        sut?.execute(id: 1, onSuccess: {_ in
             expectation.fulfill()
-        })
+        }, onFailure: { error in})
+        
         XCTAssertEqual(self.mockedAPIRepository.called, true)
     }
 }
@@ -28,7 +29,10 @@ class GetProductDetailTest: XCTestCase {
 fileprivate class MockedAPIRepository : APIRepository{
     var called = false
     
-    func getProductList(page:Int, pageSize:Int, completion: @escaping (ProductList) -> ()) {
+    func getProductList(page:Int, pageSize:Int, onSuccess: @escaping (ProductList) -> (), onFailure: @escaping (String)->()) {
+        return
+    }
+    func getProductDetail(id: Int, onSuccess: @escaping (Product) -> (), onFailure: @escaping (String) -> ()) {
         self.called = true
     }
 }

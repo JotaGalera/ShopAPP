@@ -26,11 +26,13 @@ class ProductListPresenterImplementation : ProductListPresenter {
     }
     
     func getProductList(){
-        self.getProductListUseCase.execute(page: currentPage, pageSize: pageSize, completion: { productList in
+        self.getProductListUseCase.execute(page: currentPage, pageSize: pageSize, onSuccess: { productList in
             self.totalPageSize = productList.getSizeTotalPage()
             self.setPaginationIndex()
             self.view?.hideLoading()
             self.view?.showProduct(productListDomain: productList)
+        }, onFailure: { error in
+            self.view?.showError(error: error)
         })
     }
     
@@ -43,8 +45,10 @@ class ProductListPresenterImplementation : ProductListPresenter {
     }
     
     func getNextProductList(){
-        self.getProductListUseCase.execute(page: currentPage, pageSize: pageSize, completion: { productList in
+        self.getProductListUseCase.execute(page: currentPage, pageSize: pageSize, onSuccess: { productList in
             self.view?.showNextListProucts(productListDomain: productList)
+        }, onFailure: { error in
+            self.view?.showError(error: error)
         })
     }
     

@@ -9,8 +9,8 @@ class ProductListDataMapper {
         
         if let json = try? JSONSerialization.jsonObject(with: data, options: []){
             guard let array = json as? [String:Any] else { return nil }
-            guard let numPageArray = array as? [String:Any] else { return nil }
-            guard let sizePageString = numPageArray["size"] as? String else { return nil }
+            guard let sizeArray = array as? [String:Any] else { return nil }
+            guard let sizePageString = sizeArray["size"] as? String else { return nil }
             self.sizeTotalPage = Int(sizePageString) ?? 0
             guard let elements = array["list"] as? [[String:Any]] else { return nil }
             for item in elements{
