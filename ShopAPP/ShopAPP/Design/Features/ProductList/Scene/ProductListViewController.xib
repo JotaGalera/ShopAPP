@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductListViewController" customModule="ShopAPP">
             <connections>
+                <outlet property="activityIndicator" destination="hNr-Bt-59w" id="aH5-dr-3qD"/>
                 <outlet property="tableProduct" destination="afG-UK-Q84" id="Odd-Mh-alL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DJP-VS-wYW"/>
             </connections>
@@ -22,9 +23,14 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hNr-Bt-59w">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="hNr-Bt-59w" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="67y-SN-miD"/>
+                <constraint firstItem="hNr-Bt-59w" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8Eq-7q-fMg"/>
                 <constraint firstItem="afG-UK-Q84" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="D0K-6T-nHa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="afG-UK-Q84" secondAttribute="trailing" id="UJG-Q7-hP8"/>
                 <constraint firstItem="afG-UK-Q84" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZWg-9x-FM8"/>

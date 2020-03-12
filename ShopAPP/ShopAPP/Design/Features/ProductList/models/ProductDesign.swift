@@ -6,7 +6,7 @@ class ProductDesign{
     let textPriceLabel: String
     let textBrandLabel: String
     
-    init(product: ProductDomain){
+    init(product: Product){
         nameCell = product.name
         textPriceLabel = "\(product.price) \(product.currency)"
         textBrandLabel = product.brand

@@ -26,7 +26,6 @@ class ProductDataListMapperTest: XCTestCase {
             
             XCTAssertEqual(productDataConverted, mockProductDataList)
         } catch {
-            print(error.localizedDescription)
             XCTAssert(false)
         }
     }
@@ -34,7 +33,7 @@ class ProductDataListMapperTest: XCTestCase {
     func testConvert() {
         let mockProductData = ProductData(dict: ["id": 1, "name": "shirts", "brand": "Tommy Hilfiger", "price": 80, "currency": "€", "image": "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg", "_link": "http://bestsecret-recruitment-api.herokuapp.com/products/1", "_type": "product"])
         let mockProductListData = ProductListData(arrayProductData: [mockProductData])
-        let mockProductList = ProductList(arrayProducts: [ProductDomain(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")])
+        let mockProductList = ProductList(arrayProducts: [Product(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")])
         
         let productList = sut?.convert(dto: mockProductListData)
         

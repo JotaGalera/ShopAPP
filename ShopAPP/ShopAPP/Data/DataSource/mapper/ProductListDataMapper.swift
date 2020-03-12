@@ -2,14 +2,16 @@ import Foundation
 
 class ProductListDataMapper {
     private let productDataMapper = ProductDataMapper()
-    //private let sizeTotal: Int?
+    private var sizeTotalPage: Int = 0
     
     func convertToDTO(data: Data) -> ProductListData?{
         let productDataList = ProductListData(arrayProductData: [])
         
         if let json = try? JSONSerialization.jsonObject(with: data, options: []){
             guard let array = json as? [String:Any] else { return nil }
-            //guard self.sizeTotal = array["size"] as? Int ?? 0 as Int
+            guard let numPageArray = array as? [String:Any] else { return nil }
+            guard let sizePageString = numPageArray["size"] as? String else { return nil }
+            self.sizeTotalPage = Int(sizePageString) ?? 0
             guard let elements = array["list"] as? [[String:Any]] else { return nil }
             for item in elements{
                 let productData = productDataMapper.convertToDTO(dict: item)
@@ -22,8 +24,9 @@ class ProductListDataMapper {
     func convert(dto: ProductListData) -> ProductList {
         let array = dto.getAllProductData()
         let productList = ProductList(arrayProducts: [])
+        productList.setSizeTotalPage(sizeTotalPage)
         for i in array{
-            let productDomain = ProductDomain(name: i.name, brand: i.brand, price: i.price, currency: i.currency, image: i.image)
+            let productDomain = Product(name: i.name, brand: i.brand, price: i.price, currency: i.currency, image: i.image)
             productList.addProductsToList(product: productDomain)
         }
         return productList

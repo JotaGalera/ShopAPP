@@ -5,8 +5,8 @@ class ProductDesignTest: XCTestCase {
 
     var sut : ProductDesign?
     
-    func initTest() {
-        let smokeProductDomain : ProductDomain = ProductDomain(name: "name", brand: "brand", price: 1, currency: "currency", image: "image")
+    func testInit() {
+        let smokeProductDomain : Product = Product(name: "name", brand: "brand", price: 1, currency: "currency", image: "image")
         
         sut = ProductDesign(product: smokeProductDomain)
         

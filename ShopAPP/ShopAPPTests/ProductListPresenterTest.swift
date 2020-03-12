@@ -15,10 +15,26 @@ class ProductListPresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    func testGetData() {
+    func testGetProductList() {
         sut?.getProductList()
         
         XCTAssertEqual(mockedGetProductListUseCaseImplementation.called, true)
+    }
+    
+    func testGetNextProductList() {
+        sut?.getNextProductList()
+        
+        XCTAssertEqual(mockedGetProductListUseCaseImplementation.called, true)
+    }
+    
+    func testCanGoNextPage() {
+        XCTAssertEqual(sut?.canGoNextPage(), false)
+    }
+    
+    func testGoNextPageThenUpdateIndex() {
+        sut?.goNextPageThenUpdateIndex() 
+    
+        XCTAssertEqual(sut?.canGoNextPage(), false)
     }
 }
 fileprivate class MockedGetProductListUseCaseImplementation : GetProductListUseCaseImplementation {

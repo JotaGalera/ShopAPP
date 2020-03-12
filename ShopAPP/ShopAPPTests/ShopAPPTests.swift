@@ -6,7 +6,7 @@ class ProductListTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let arrayEmpty : [ProductDomain] = []
+        let arrayEmpty : [Product] = []
         sut = ProductList(arrayProducts: arrayEmpty)
     }
 
@@ -15,8 +15,8 @@ class ProductListTest: XCTestCase {
         super.tearDown()
     }
 
-    func testAddProduct(){
-        let mockProduct = ProductDomain(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")
+    func testAddProductsToList(){
+        let mockProduct = Product(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")
         
         sut?.addProductsToList(product: mockProduct)
         
@@ -24,10 +24,46 @@ class ProductListTest: XCTestCase {
     }
     
     func testCount(){
-        let mockProduct = ProductDomain(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")
+        let mockProduct = Product(name: "shirts", brand: "Tommy Hilfiger", price: 80, currency: "€", image: "https://picture.bestsecret.com/static/images/1041/image_31394462_20_620x757_0.jpg")
         
         sut?.addProductsToList(product: mockProduct)
         
         XCTAssertEqual(sut?.count(), 1)
     }
+    
+    func testSetSizeTotalPage (){
+        let mockSizeTotalPage = 1
+        
+        sut?.setSizeTotalPage(mockSizeTotalPage)
+        
+        XCTAssertEqual(sut?.getSizeTotalPage(), mockSizeTotalPage)
+    }
 }
+
+/*
+
+ class ProductList{
+     private var arrayProducts: [ProductDomain] = []
+     private var sizeTotalPage: Int?
+    
+     init (arrayProducts: [ProductDomain]) {
+         self.arrayProducts = arrayProducts
+     }
+     
+     func setSizeTotalPage(_ sizeTotalPage: Int){
+         self.setSizeTotalPage(sizeTotalPage)
+     }
+     
+     func addProductsToList( product: ProductDomain ){
+         arrayProducts.append(product)
+     }
+     
+     func getProductToList(index: Int) -> ProductDomain{
+         return arrayProducts[index]
+     }
+     
+     func count() -> Int {
+         return arrayProducts.count
+     }
+ }
+ */
