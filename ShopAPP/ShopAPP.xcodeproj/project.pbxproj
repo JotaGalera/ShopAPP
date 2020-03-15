@@ -120,6 +120,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		351AC396241B7C2D00AD8E89 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				351AC397241B7C3D00AD8E89 /* Scene */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		351AC397241B7C3D00AD8E89 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		356501D72418D38800FB4E6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +326,7 @@
 		8963E4EB2416CDC100ECC7B5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				351AC396241B7C2D00AD8E89 /* ProductDetail */,
 				8963E4EC2416CDCE00ECC7B5 /* ProductList */,
 			);
 			path = Features;

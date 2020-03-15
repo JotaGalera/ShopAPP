@@ -2,8 +2,8 @@ import Foundation
 
 protocol GetProductListUseCase {
     func execute( page:Int, pageSize: Int,
-                 onSuccess: @escaping (ProductList) -> (),
-                 onFailure: @escaping (String) -> () )
+                 onSuccess: @escaping (ProductList)->(),
+                 onFailure: @escaping (String)->() )
 }
 
 class GetProductListUseCaseImplementation : GetProductListUseCase {
@@ -13,7 +13,7 @@ class GetProductListUseCaseImplementation : GetProductListUseCase {
         self.repository = repository
     }
     
-    func execute(page:Int, pageSize: Int, onSuccess: @escaping (ProductList) -> (), onFailure: @escaping (String) ->() ){
+    func execute(page:Int, pageSize: Int, onSuccess: @escaping (ProductList)->(), onFailure: @escaping (String)->() ){
         self.repository.getProductList(page:page, pageSize:pageSize, onSuccess: onSuccess, onFailure: onFailure )
     }
 }

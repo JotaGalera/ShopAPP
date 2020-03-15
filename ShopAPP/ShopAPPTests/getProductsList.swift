@@ -20,7 +20,9 @@ class GetProductsListTest: XCTestCase {
         
         sut?.execute(page: 1, pageSize: 1, onSuccess: { product in
             expectation.fulfill()
-        }, onFailure: { error in })
+        }, onFailure: { error in
+            expectation.fulfill()
+        })
         XCTAssertEqual(self.mockedAPIRepository.called, true)
     }
 }

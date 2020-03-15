@@ -1,6 +1,8 @@
 import Foundation
 protocol GetProductDetailUseCase{
-    func execute(id: Int, onSuccess: @escaping (Product) -> (), onFailure: @escaping (String)->() )
+    func execute(id: Int,
+                 onSuccess: @escaping (Product)->(),
+                 onFailure: @escaping (String)->() )
 }
 
 

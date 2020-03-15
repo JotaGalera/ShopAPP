@@ -3,6 +3,7 @@ import Foundation
 class APIRepositoryImplementation : APIRepository {
     private let dataSource : APIDataSource
     private let productListMapper = ProductListDataMapper()
+    private let productDataMapper = ProductDataMapper()
     
     init(dataSource: APIDataSource = APIDataSourceImplementation()){
         self.dataSource = dataSource
@@ -14,11 +15,20 @@ class APIRepositoryImplementation : APIRepository {
             guard let responseDTO = self.productListMapper.convertToDTO(data: response) else {return}
             onSuccess(self.productListMapper.convert(dto: responseDTO))
         },
-        onFailure: { error in onFailure(error)})
+        onFailure: { error in
+            onFailure(error)
+        })
     }
     
     func getProductDetail(id: Int, onSuccess: @escaping (Product) -> (), onFailure: @escaping (String) -> ()) {
-        return
+        dataSource.getProductData(id:id ,
+        onSuccess: { response in
+            guard let responseDTO = self.productDataMapper.convertToDTO(data: response) else {return}
+            onSuccess(self.productDataMapper.convert(dto: responseDTO))
+        },
+        onFailure: { error in
+            onFailure(error)
+        })
     }
     
 }

@@ -20,7 +20,9 @@ class GetProductDetailTest: XCTestCase {
         
         sut?.execute(id: 1, onSuccess: {_ in
             expectation.fulfill()
-        }, onFailure: { error in})
+        }, onFailure: { error in
+            expectation.fulfill()
+        })
         
         XCTAssertEqual(self.mockedAPIRepository.called, true)
     }
